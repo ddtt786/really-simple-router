@@ -46,6 +46,9 @@ class Router {
     }
     handleLinkClick = (event) => {
         const target = event.target;
+        if (target.hasAttribute("download")) {
+            return;
+        }
         if (target.tagName === "A") {
             event.preventDefault();
             const path = target.pathname;
