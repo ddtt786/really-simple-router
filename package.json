@@ -1,11 +1,11 @@
 {
   "name": "simple-typescript-router",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A really simple JavaScript/TypeScript router",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc && esbuild ./index.ts --minify --outfile=./dist/index.js",
+    "build": "tsc",
     "publish": "npm run build && npm publish"
   },
   "author": "ddtt786",
@@ -23,7 +23,6 @@
   ],
   "devDependencies": {
     "@types/node": "^20.3.2",
-    "typescript": "^5.1.6",
-    "esbuild": "^0.18.10"
+    "typescript": "^5.1.6"
   }
 }
