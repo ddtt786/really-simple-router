@@ -1,6 +1,6 @@
 {
   "name": "simple-typescript-router",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A really simple JavaScript/TypeScript router",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -19,7 +19,7 @@
   },
   "license": "MIT",
   "files": [
-    "build/**/*"
+    "dist/**/*"
   ],
   "devDependencies": {
     "@types/node": "^20.3.2",
