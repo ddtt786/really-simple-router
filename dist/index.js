@@ -45,15 +45,16 @@ class Router {
         this.check();
     }
     handleLinkClick = (event) => {
-        const target = event.target;
-        if (target.hasAttribute("download")) {
+        if (event.defaultPrevented) {
             return;
         }
-        if (target.tagName === "A") {
-            event.preventDefault();
-            const path = target.pathname;
-            this.navigate(this.realPath(path));
-        }
+        let anchor = event.target;
+        const path = (event.composedPath ? event.composedPath() : []);
+        anchor = path.find(({ nodeName }) => nodeName && nodeName.toLowerCase() === "a");
+        if (!anchor)
+            return;
+        event.preventDefault();
+        this.navigate(this.realPath(anchor.pathname));
     };
 }
 export { Router };

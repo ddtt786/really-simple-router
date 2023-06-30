@@ -68,15 +68,25 @@ class Router {
   }
 
   private handleLinkClick = (event: MouseEvent): void => {
-    const target = event.target as HTMLAnchorElement;
-    if (target.hasAttribute("download")) {
+    if (event.defaultPrevented) {
       return;
     }
-    if (target.tagName === "A") {
-      event.preventDefault();
-      const path = target.pathname;
-      this.navigate(this.realPath(path));
-    }
+
+    let anchor = event.target;
+
+    const path = (
+      event.composedPath ? event.composedPath() : []
+    ) as HTMLElement[];
+
+    anchor = path.find(
+      ({ nodeName }) => nodeName && nodeName.toLowerCase() === "a"
+    ) as HTMLElement;
+
+    if (!anchor) return;
+
+    event.preventDefault();
+
+    this.navigate(this.realPath((<HTMLAnchorElement>anchor).pathname));
   };
 }
 
