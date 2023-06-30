@@ -1,4 +1,4 @@
-# really-simple-router
+# simple-typescript-router
 
 A really simple JavaScript/TypeScript router
 
@@ -7,7 +7,7 @@ A really simple JavaScript/TypeScript router
 npm
 
 ```ts
-import { Router } from "simple-ts-router";
+import { Router } from "simple-typescript-router";
 
 const router = new Router();
 const title = <HTMLHeadingElement>document.querySelector("#title");
@@ -28,7 +28,7 @@ router
 web
 
 ```ts
-import { Router } from "https://esm.sh/simple-ts-router";
+import { Router } from "https://esm.sh/simple-typescript-router";
 
 const router = new Router();
 const title = <HTMLHeadingElement>document.querySelector("#title");

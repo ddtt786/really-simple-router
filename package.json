@@ -1,6 +1,6 @@
 {
-  "name": "really-simple-router",
-  "version": "1.0.0",
+  "name": "simple-typescript-router",
+  "version": "1.0.1",
   "description": "A really simple JavaScript/TypeScript router",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
