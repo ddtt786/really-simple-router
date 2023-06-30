@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "esnext",
+    "lib": ["ESNext", "DOM"],
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "noEmitOnError": true,
+    "strict": true,
+    "outDir": "dist",
+    "declaration": true
+  },
+  "ts-node": {
+    "esm": true
+  },
+  "include": ["./**/*.ts"]
+}
