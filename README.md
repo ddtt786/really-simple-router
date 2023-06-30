@@ -2,7 +2,7 @@
 
 A really simple JavaScript/TypeScript router
 
-- ~1kb minified ~0.5kb compressed
+- ~1kb minified ~0.6kb compressed
 
 npm
 

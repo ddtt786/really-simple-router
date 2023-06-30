@@ -69,6 +69,9 @@ class Router {
 
   private handleLinkClick = (event: MouseEvent): void => {
     const target = event.target as HTMLAnchorElement;
+    if (target.hasAttribute("download")) {
+      return;
+    }
     if (target.tagName === "A") {
       event.preventDefault();
       const path = target.pathname;
