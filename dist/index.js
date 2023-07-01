@@ -41,7 +41,7 @@ class Router {
         }
     }
     navigate(path = "") {
-        history.pushState(null, "", path);
+        history.pushState(null, "", this.realPath(path));
         this.check();
     }
     handleLinkClick = (event) => {
@@ -54,7 +54,7 @@ class Router {
         if (!anchor)
             return;
         event.preventDefault();
-        this.navigate(this.realPath(anchor.pathname));
+        this.navigate(anchor.pathname);
     };
 }
 export { Router };

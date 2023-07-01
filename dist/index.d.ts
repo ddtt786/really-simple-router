@@ -13,7 +13,7 @@ declare class Router {
     private realPath;
     private pathCheck;
     check(): void;
-    private navigate;
+    navigate(path?: string): void;
     private handleLinkClick;
 }
 export { Router };
