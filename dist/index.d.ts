@@ -6,6 +6,7 @@ interface Route {
     cb: (params: RouteParams) => any;
 }
 declare class Router {
+    self: this;
     routes: Route[];
     root: string;
     constructor(root?: string);

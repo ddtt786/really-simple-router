@@ -8,12 +8,13 @@ interface Route {
 }
 
 class Router {
+  self = this;
   routes: Route[] = [];
   root: string = "/";
 
   constructor(root: string = "/") {
     this.root = root;
-    addEventListener("popstate", this.check);
+    addEventListener("popstate", () => this.check());
     document.addEventListener("click", this.handleLinkClick);
   }
 
@@ -39,7 +40,7 @@ class Router {
     );
   }
 
-  check(): void {
+  check() {
     const matchingRoute = this.routes.find((route) => {
       const { path } = route;
       const match = this.pathCheck(location.pathname, path);

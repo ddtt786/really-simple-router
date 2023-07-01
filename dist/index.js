@@ -1,9 +1,10 @@
 class Router {
+    self = this;
     routes = [];
     root = "/";
     constructor(root = "/") {
         this.root = root;
-        addEventListener("popstate", this.check);
+        addEventListener("popstate", () => this.check());
         document.addEventListener("click", this.handleLinkClick);
     }
     add(path, cb) {
