@@ -62,8 +62,8 @@ class Router {
     }
   }
 
-  private navigate(path: string = "") {
-    history.pushState(null, "", path);
+  navigate(path: string = "") {
+    history.pushState(null, "", this.realPath(path));
     this.check();
   }
 
@@ -86,7 +86,7 @@ class Router {
 
     event.preventDefault();
 
-    this.navigate(this.realPath((<HTMLAnchorElement>anchor).pathname));
+    this.navigate((<HTMLAnchorElement>anchor).pathname);
   };
 }
 
